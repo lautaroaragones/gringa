@@ -33,4 +33,5 @@ build/
 .vscode/
 
 /src/main/resources/local-sensitive.conf
+/src/main/resources/user.xlsx
 /src/main/resources/download/
