@@ -24,6 +24,8 @@ class GringaApplicationTests {
 
 	@Test
 	void contextLoads() throws InterruptedException {
+		//TODO PROBAR EL EMAIL ANTES
+		//emailService.send("prueba", "asd", "lautaro.aragones@gmail.com", "src/main/resources/download/30711646260_004_00006_00000081.pdf", "asd");
 		afipJob.execute();
 	}
 

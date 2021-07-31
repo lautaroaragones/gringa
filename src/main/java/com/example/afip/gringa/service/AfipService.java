@@ -1,10 +1,7 @@
 package com.example.afip.gringa.service;
 
 import com.example.afip.gringa.dto.User;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -118,6 +115,9 @@ public class AfipService {
     }
 
     public void download(WebDriver driver) throws InterruptedException {
+        JavascriptExecutor js = ((JavascriptExecutor) driver);
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//input[@value='Imprimir...']")).click();
         Thread.sleep(2000);
     }

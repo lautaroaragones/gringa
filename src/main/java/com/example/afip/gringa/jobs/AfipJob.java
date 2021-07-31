@@ -101,7 +101,7 @@ public class AfipJob {
 
         afipService.getLastModifiedFile(user);
 
-        printerService.print(user.getFilePath());
+        //printerService.print(user.getFilePath());
 
         emailService.send(user.getDescription(),"FEE Mensual", user.getEmail(),user.getFilePath(),user.getDescription());
 
