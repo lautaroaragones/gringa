@@ -71,13 +71,19 @@ public class AfipService {
         Thread.sleep(2000);
     }
 
-    public void conditionAgainstIVA(WebDriver driver) throws InterruptedException {
+    public void conditionAgainstIVAB(WebDriver driver) throws InterruptedException {
         WebElement selectElement3 = driver.findElement(By.id("idivareceptor"));
         Select selectObject3 = new Select(selectElement3);
         selectObject3.selectByVisibleText(" Consumidor Final");
         Thread.sleep(2000);
     }
 
+    public void conditionAgainstIVAA(WebDriver driver) throws InterruptedException {
+        WebElement selectElement3 = driver.findElement(By.id("idivareceptor"));
+        Select selectObject3 = new Select(selectElement3);
+        selectObject3.selectByVisibleText(" IVA Responsable Inscripto");
+        Thread.sleep(2000);
+    }
 
     public void termsOfSale(WebDriver driver) throws InterruptedException {
         waitElement(By.xpath("//*[@id=\"formadepago1\"]"), driver).click();

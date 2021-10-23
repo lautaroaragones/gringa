@@ -75,8 +75,12 @@ public class AfipJob {
 
         afipService.continueButton(driver);
 
+        if (user.getInvoice().equals("Recibo A")) {
+            afipService.conditionAgainstIVAA(driver);
+        }
+
         if (user.getInvoice().equals("Recibo B")) {
-            afipService.conditionAgainstIVA(driver);
+            afipService.conditionAgainstIVAB(driver);
         }
 
         afipService.sendNumberDoc(driver, user);
